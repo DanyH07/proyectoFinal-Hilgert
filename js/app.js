@@ -7,16 +7,17 @@ const formulario=document.getElementById("formulario")
 
 const finalizarCompra= document.getElementById("enviarTotal")
 
+let acarrito = JSON.parse(localStorage.getItem("contenedorCarrito")) || []
 
 
 
-let acarrito = JSON.parse(localStorage.getItem("acarrito")) || []
 
 const mostrarProducto = async()=> {
 
 	const resp= await fetch("./js/productos.json")
 	const productos = await resp.json()
 	con.innerHTML="";
+	
 
 productos.forEach((pizza,) =>{
 
@@ -40,6 +41,8 @@ productos.forEach((pizza,) =>{
 
 } )
  })
+ 
+    
 }
 
 const agregarACarrito= (pizzas,id)=> {
@@ -62,10 +65,8 @@ mostrarCarrito()
 	 acarrito.forEach((pizza)=>{
 	 const mostrarCarrito= document.createElement("ul")
 	 mostrarCarrito.classList.add("cssproductos")
-
 	 mostrarCarrito.innerHTML=
 	 `
-	 
 	 <h5 class="tipotext2">${pizza.tipo}</h5>
 	 <img src="${pizza.Imagen}" class="img2" alt="card-img-top">
 	<p class="ingrediente2">${pizza.ingredientes}</p>
@@ -98,13 +99,14 @@ mostrarCarrito()
 	const limpiar= document.getElementById("enviarTotal");
 	limpiar.addEventListener("click", ()=>{
         itemCarrito.innerHTML="";
+		acarrito.splice(0, acarrito.length)
 		finalizar()
 	})
   }
 
-const filtrado= (pizzas,precio,id) => {
+const filtrado= (pizza) => {
 	const itemEconomicas=document.getElementById("economicas")
-	itemEconomicas=pizzas.filter((pizza)=>pizza.precio < 1350);
+	itemEconomicas=pizza.filter((pizza)=>pizza.precio < 1350);
 	
 	filtrado()
 	// const itemVeganas=document.getElementById("veganas")
@@ -117,7 +119,6 @@ const filtrado= (pizzas,precio,id) => {
 // 		}
 // //    const veganas = id.filter((i)=> i.id >= 5)
  } 
-
 
 
 

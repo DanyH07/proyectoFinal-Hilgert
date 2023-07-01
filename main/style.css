@@ -33,9 +33,9 @@ section h3{
     margin: 1cm;
     background-color: rgb(255, 190, 162);
 }
-.carrito{display: flex;
+/* .carrito{
 
-}
+} */
 #enviarTotal{
    align-items: end;
 }
@@ -49,7 +49,7 @@ section h3{
     
 }
 .img2{
-    width: 6cm;;
+    width: 2cm;;
 }
 
 .botonagregar{border-radius: 1cm;
@@ -68,6 +68,7 @@ section h3{
     width: 15cm;
 }
 
-.btn{border: 0.5cm;
+#btn{border: 0.5cm;
     border-color: black;
+    margin: 10px;
 }
