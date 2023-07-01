@@ -9,14 +9,12 @@ const finalizarCompra= document.getElementById("enviarTotal")
 
 let acarrito = JSON.parse(localStorage.getItem("contenedorCarrito")) || []
 
-let fechProductos=[]
-console.log(fechProductos)
 
 const mostrarProducto = async()=> {
 	
 	const resp= await fetch("./js/productos.json")
 	const productos = await resp.json()
-	fechProductos = productos
+	
 	contenedorPizza.innerHTML="";
 	
 productos.forEach((pizza,) =>{
@@ -102,23 +100,6 @@ mostrarCarrito()
 		finalizar()
 	})
   }
-
-const filtrado= (fechProductos) => {
-	const itemEconomicas=document.getElementById("economicas")
-	itemEconomicas=fechProductos.filter((pizza)=>pizza.precio < 2000);
-	
-	filtrado()
-	
-	// const itemVeganas=document.getElementById("veganas")
-// 	 if(itemEconomicas){
-// 		itemEconomicas.addEventListener("click"), ()=>{
-// 		pizzas.filter((p)=>p.precio < 1350);
-// 		   filtrado()
-
-
-// 		}
-// //    const veganas = id.filter((i)=> i.id >= 5)
- } 
 
 
  const inputName=document.getElementById("inputName")
