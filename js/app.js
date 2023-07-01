@@ -9,18 +9,17 @@ const finalizarCompra= document.getElementById("enviarTotal")
 
 let acarrito = JSON.parse(localStorage.getItem("contenedorCarrito")) || []
 
-
-
+let fechProductos=[]
+console.log(fechProductos)
 
 const mostrarProducto = async()=> {
-
+	
 	const resp= await fetch("./js/productos.json")
 	const productos = await resp.json()
-	con.innerHTML="";
+	fechProductos = productos
+	contenedorPizza.innerHTML="";
 	
-
 productos.forEach((pizza,) =>{
-
     const conteiner = document.createElement(`div`)
 	conteiner.classList.add("principal")
    conteiner.innerHTML =
@@ -33,16 +32,16 @@ productos.forEach((pizza,) =>{
     <button id="${pizza.id}" type="button" class="botonagregar" data-bs-toggle="button" autocomplete="off">Agregar a Carrito</button>
 	</div>
 	`
+	
     contenedorPizza.appendChild(conteiner);
 
     const botonPizza= document.getElementById(`${pizza.id}`)
     botonPizza.addEventListener(`click`, ()=>{
          agregarACarrito(productos,pizza.id)
-
+		 
 } )
  })
  
-    
 }
 
 const agregarACarrito= (pizzas,id)=> {
@@ -104,11 +103,12 @@ mostrarCarrito()
 	})
   }
 
-const filtrado= (pizza) => {
+const filtrado= (fechProductos) => {
 	const itemEconomicas=document.getElementById("economicas")
-	itemEconomicas=pizza.filter((pizza)=>pizza.precio < 1350);
+	itemEconomicas=fechProductos.filter((pizza)=>pizza.precio < 2000);
 	
 	filtrado()
+	
 	// const itemVeganas=document.getElementById("veganas")
 // 	 if(itemEconomicas){
 // 		itemEconomicas.addEventListener("click"), ()=>{
@@ -119,13 +119,6 @@ const filtrado= (pizza) => {
 // 		}
 // //    const veganas = id.filter((i)=> i.id >= 5)
  } 
-
-
-
-
-
-
-
 
 
  const inputName=document.getElementById("inputName")
