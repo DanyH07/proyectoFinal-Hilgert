@@ -1,0 +1,10 @@
+[
+    {"id":"1", "tipo":"Mozarela","precio": 1300,"ingredientes":"salsa de tomate, queso, aceitunas y jamon","Imagen":"./img/muzarela.jpg"},
+    {"id":"2", "tipo":"Napolitana","precio": 1800,"ingredientes":"salsa de tomate, tomates, ajo, queso y jamon","Imagen":"./img/napolitana.jpg"},
+    {"id":"3", "tipo":"4quesos","precio": 2000,"ingredientes":"salsa de tomate, queso azul, queso parmesano, mozarela y queso fontina","Imagen":"./img/4quesos.jpg"},
+    {"id":"4", "tipo":"Anchoas","precio": 2100,"ingredientes":"salsa de tomate,anchoas,aceitunas y jamon","Imagen":"./img/anchoas.jpg"},
+    {"id":"5", "tipo":"Verduras","precio": 2230,"ingredientes":"salsa de tomate, cebolla, morron, rucula y aceitunas","Imagen":"./img/verdura.jpg"},
+    {"id":"6", "tipo":"Champigniones","precio": 2200,"ingredientes":"salsa de tomate, champignones, aceitunas y jamon","Imagen":"./img/champigniones.jpg"},
+    {"id":"7", "tipo":"Vegana","precio": 2150,"ingredientes":"salas de tomate, morron, cebolla, aceitunas negras y queso vegan","Imagen":"./img/veg1.jpg"},
+    {"id":"8", "tipo":"Vegana2","precio": 2250,"ingredientes":"salsa de tomate, brocoli,rucula tofu, queso vegan y aceite de sesamo","Imagen":"./img/veg2.jpg"}
+]

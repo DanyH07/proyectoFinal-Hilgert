@@ -1,0 +1,40 @@
+header nav{height: 3cm;
+
+}
+section article div{
+    
+}
+.principal{
+    background-color: black;
+width: 8cm;
+flex-wrap: wrap;
+}
+
+.img1{margin: 8px;
+    align-items: center;
+    border-radius: 1cm;
+    
+}
+.img2{
+    width: 6cm;;
+}
+
+.botonagregar{border-radius: 1cm;
+    border-color: black;
+    margin: 0.5cm;
+
+}
+.tipotext1{text-align:center;
+
+}
+.tipotext2{align-items: center;
+    width: 5cm   ;
+}
+
+.text-muted{
+    width: 15cm;
+}
+
+.btn{border: 0.5cm;
+    border-color: black;
+}
