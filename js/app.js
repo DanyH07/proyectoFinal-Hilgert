@@ -159,9 +159,9 @@ const btn =document.getElementById("btn")
 	  })
 	  })
 
- mostrarProducto()
+mostrarProducto()
 mostrarCarrito()
- finalizar()
+finalizar()
 
 
 

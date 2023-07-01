@@ -1,17 +1,50 @@
 header nav{height: 3cm;
 
 }
-section article div{
-    
-}
 .principal{
-    background-color: black;
-width: 8cm;
-flex-wrap: wrap;
+    
+width: auto;
+height: auto;
+margin: 0.5cm;
+
+
 }
 
-.img1{margin: 8px;
-    align-items: center;
+section article div{
+    max-width: 90%;
+   
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+}
+section article h2{
+    text-align: center;
+    margin: 1cm;
+    background-color: rgb(255, 190, 162);
+}
+section ul div {
+    background-color: rgb(249, 166, 103);
+    margin: 1cm;
+
+}
+section h3{
+   text-align   : center;
+    margin: 1cm;
+    background-color: rgb(255, 190, 162);
+}
+.carrito{display: flex;
+
+}
+#enviarTotal{
+   align-items: end;
+}
+
+
+.img1{width: 4cm;
+   margin: 1cm;
+    
+    
     border-radius: 1cm;
     
 }
